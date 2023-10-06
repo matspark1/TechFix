@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "MontSemiB", sans-serif;
+  background-color: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+  color: #efeee9;
+}
+
+#inject {
+  margin: 10px 40px 0px 40px;
+}
+
+.site-wrapper {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: "UniHeavy";
+  src: url(../css/fonts/UniNeue-Heavy.ttf) format("truetype");
+}
+@font-face {
+  font-family: "UniBold";
+  src: url(../css/fonts/UniNeue-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "UniReg";
+  src: url(../css/fonts/UniNeue-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "UniBlack";
+  src: url(../css/fonts/UniNeue-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "MontBold";
+  src: url(../css/fonts/Montserrat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "MontSemiB";
+  src: url(../css/fonts/Montserrat-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "MonthMed";
+  src: url(../css/fonts/Montserrat-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Anydore";
+  src: url(../css/fonts/Anydore.ttf) format("truetype");
+}
+#modal-inject {
+  position: fixed;
+  background-color: rgba(24, 24, 24, 0.9);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: none;
+  justify-content: center;
+  z-index: 99;
+}
+#modal-inject #modal-background {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#modal-inject .modal-wrapper {
+  margin: 0 auto;
+  width: 565px;
+  min-height: 60vh;
+  border-radius: 40px;
+  background-color: #202020;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#modal-inject .modal-wrapper .x-button {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: "MontBold", sans-serif;
+  width: 32px;
+  height: 32px;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgba(20, 20, 20, 0.65);
+}
+#modal-inject .modal-wrapper .x-button:hover {
+  background-color: rgba(20, 20, 20, 0.85);
+  color: #c4c4c4;
+}
+#modal-inject .modal-wrapper .modal-content {
+  margin-top: 60px;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+#modal-inject .modal-wrapper .modal-content input {
+  width: 420px;
+  height: 65px;
+  border-radius: 5px;
+  border: 2px solid #202020;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: #262626;
+  color: #fff;
+}
+#modal-inject .modal-wrapper .modal-content .sign-titles {
+  font-family: "MontSemiB", sans-serif;
+  font-size: 28px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+#modal-inject .modal-wrapper .modal-content .remember-box {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin-top: 10px;
+}
+#modal-inject .modal-wrapper .modal-content .remember-box a {
+  margin-left: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  color: #235ac9;
+  cursor: pointer;
+}
+#modal-inject .modal-wrapper .modal-content .remember-box a:hover {
+  color: #204da6;
+}
+#modal-inject .modal-wrapper .modal-content .login-button {
+  width: 420px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #235ac9;
+  color: #fff;
+  font-family: "MontBold", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 26px;
+  cursor: pointer;
+}
+#modal-inject .modal-wrapper .modal-content .login-button:hover {
+  background-color: #204da6;
+}
+#modal-inject .modal-wrapper .modal-content span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 420px;
+  height: 45px;
+  font-size: 14px;
+  background-color: #322ad4;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "MontBold", sans-serif;
+}
+#modal-inject .modal-wrapper .modal-content span:hover {
+  background-color: #2a23a5;
+}
+#modal-inject .modal-wrapper2 {
+  display: none;
+  margin: 0 auto;
+  width: 565px;
+  min-height: 60vh;
+  border-radius: 40px;
+  background-color: #202020;
+  padding: 20px 30px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#modal-inject .modal-wrapper2 .x-button {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: "MontBold", sans-serif;
+  width: 32px;
+  height: 32px;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgba(20, 20, 20, 0.65);
+}
+#modal-inject .modal-wrapper2 .x-button:hover {
+  background-color: rgba(20, 20, 20, 0.85);
+  color: #c4c4c4;
+}
+#modal-inject .modal-wrapper2 .modal-content {
+  margin-top: 60px;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+}
+#modal-inject .modal-wrapper2 .modal-content .login-button {
+  width: 420px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c92323;
+  color: #fff;
+  font-family: "MontBold", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 26px;
+  cursor: pointer;
+}
+#modal-inject .modal-wrapper2 .modal-content .login-button:hover {
+  background-color: #a62020;
+}
+#modal-inject .modal-wrapper2 .modal-content h1 {
+  text-align: center;
+  font-family: "MontBold", sans-serif;
+  font-size: 50px;
+  margin-bottom: 120px;
+  margin-top: 50px;
+  width: 300px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141414;
+  height: 80px;
+}
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "UniBlack", sans-serif;
+  font-size: 30px;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+nav a span {
+  color: #fff;
+  transition: ease 0.3s;
+}
+nav a .indy {
+  font-family: "Anydore", sans-serif;
+  color: #c82929;
+  transition: ease 0.3s;
+  font-size: 40px;
+}
+nav .left-nav {
+  margin-right: 20px;
+}
+nav .left-nav a {
+  margin: 0 10px;
+  padding: 6px 4px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  transition: ease 0.1s;
+}
+nav .left-nav a:hover {
+  border-top: 4px solid #c82929;
+}
+nav .left-nav #login {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #141414;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  transition: ease 0.1s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: ease 0.2s;
+}
+nav .left-nav #login:hover {
+  transition: ease 0.2s;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #141414;
+}
+
+.footer {
+  height: 100px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #141414;
+}
+.footer span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .foot-text {
+  font-family: "MontSemiB", sans-serif;
+}
+.footer p {
+  color: #fff;
+  margin: 0 20px;
+}
+.footer .footer-links {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer a {
+  height: 36px;
+  width: 36px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.45rem;
+  margin: 0px 20px;
+  transition: ease 0.35s;
+  text-align: center;
+  border-radius: 30px;
+}
+.footer a i {
+  margin-top: 19%;
+}
+.footer a:hover {
+  background-color: #fff;
+  color: #141414;
+  transition: ease 0.4s;
+}
+
+.home-hero {
+  background-image: url(../images/home-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-hero h1 {
+  font-family: "MontBold", sans-serif;
+  font-size: 60px;
+}
+.home-hero h3 {
+  font-size: 30px;
+}
+.home-hero a {
+  padding: 18px 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #c82929;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.home-hero a:hover {
+  background-color: #a72222;
+}
+
+.repair-title {
+  background-color: #c82929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.repair-title h1 {
+  font-family: "MontBold", sans-serif;
+  font-size: 42px;
+  margin-top: 16px;
+}
+
+.repairs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.repairs .repair-box {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 310px;
+  background-color: #141414;
+  border-radius: 7px;
+  margin-top: 30px;
+  margin: 40px 20px;
+}
+.repairs .repair-box img {
+  width: 275px;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 7px;
+  border: 2px solid #fff;
+  margin-left: 20px;
+}
+.repairs .repair-box .repair-desc {
+  margin-left: 32px;
+  height: 250px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.repairs .repair-box .repair-desc h3 {
+  font-family: "MontBold", sans-serif;
+  font-size: 22px;
+}
+.repairs .repair-box .repair-desc a {
+  position: absolute;
+  padding: 12px 32px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #c82929;
+  color: #fff;
+  margin-top: 205px;
+  text-decoration: none;
+}
+.repairs .repair-box .repair-desc a:hover {
+  background-color: #a72222;
+}
+.repairs .repair-box .repair-desc p {
+  text-align: center;
+  margin-top: 10px;
+}
+.repairs .repair-box .repair-desc span {
+  position: absolute;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 175px;
+  font-family: "MontMed", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form input {
+  width: 500px;
+  height: 65px;
+  border-radius: 5px;
+  border: 2px solid #202020;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: #262626;
+  color: #fff;
+}
+form select {
+  width: 500px;
+  height: 65px;
+  border-radius: 5px;
+  border: 2px solid #202020;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: #262626;
+  color: #fff;
+}
+form textarea {
+  width: 500px;
+  height: 260px;
+  border-radius: 5px;
+  border: 2px solid #202020;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: #262626;
+  color: #fff;
+}
+form .submit-contact {
+  width: 500px;
+  height: 65px;
+  border-radius: 5px;
+  border: 2px solid #202020;
+  font-family: "MontSemiB", sans-serif;
+  font-size: 18px;
+  padding: 13px;
+  margin-top: 10px;
+  background-color: #c82929;
+  color: #fff;
+  cursor: pointer;
+}
+form .submit-contact:hover {
+  background-color: #a72222;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+.contact-wrapper .map-info iframe {
+  border-radius: 6px;
+  height: 700px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+.contact-wrapper .form {
+  margin-right: 20px;
+  margin-top: 9px;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1225px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .contact-wrapper .form {
+    margin-right: 0px;
+  }
+  .contact-wrapper .map-info iframe {
+    height: 400px;
+    width: 500px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

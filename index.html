@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechFix</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="modal-inject">
+      <div id="modal-background" class="close"></div>
+      <div id="modal-wrap1" class="modal-wrapper">
+        <div class="x-button close">X</div>
+        <div class="modal-content">
+          <form>
+          <label class="sign-titles">Sign in to your account</label>
+          <input type="text" placeholder="Enter Username" required />
+          <input type="password" placeholder="Enter Password" required />
+          <div class="remember-box">
+            <a>Forgot your password?</a>
+          </div>
+          <input type="submit" value="Sign In" class="login-button"></input>
+        </form>
+          <span>Sign Up</span>
+        </div>
+      </div>
+      <div id="modal-wrap2" class="modal-wrapper2">
+        <div class="x-button close">X</div>
+        <div class="modal-content">
+          <h1>YOU ARE SIGNED IN</h1>
+          <a class="login-button">Sign Out</a>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">TechFix<span class="indy"> indy</span></a>
+      <div class="left-nav">
+        <a href="#contact">Contact</a>
+        <a id="login" class="login">Login</a>
+      </div>
+    </nav>
+    <div id="app-inject"></div>
+    <div class="footer">
+      <p>
+        <span>&copy</span> 2023
+        <span class="foot-text">TechFix LLC</span>
+      </p>
+
+      <div class="footer-links">
+        <a href="#####"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#####"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#####"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <script type="module" src="lib/jquery-3.7.1.min.js"></script>
+    <script type="module" src="app/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  input {
+    width: 500px;
+    height: 65px;
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-family: $UniBold;
+    font-size: 18px;
+    padding: 13px;
+    margin-top: 10px;
+    background-color: #262626;
+    color: #fff;
+  }
+  select {
+    width: 500px;
+    height: 65px;
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-family: $UniBold;
+    font-size: 18px;
+    padding: 13px;
+    margin-top: 10px;
+    background-color: #262626;
+    color: #fff;
+  }
+  textarea {
+    width: 500px;
+    height: 260px;
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-family: $UniBold;
+    font-size: 18px;
+    padding: 13px;
+    margin-top: 10px;
+    background-color: #262626;
+    color: #fff;
+  }
+  .submit-contact {
+    width: 500px;
+    height: 65px;
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-family: $UniBold;
+    font-size: 18px;
+    padding: 13px;
+    margin-top: 10px;
+    background-color: #c82929;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: #a72222;
+    }
+  }
+}
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  .map-info {
+    iframe {
+      border-radius: 6px;
+      height: 700px;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+  }
+  .form {
+    margin-right: 20px;
+    margin-top: 9px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 1225px) {
+  .contact-wrapper {
+    flex-direction: column;
+    .form {
+      margin-right: 0px;
+    }
+    .map-info {
+      iframe {
+        height: 400px;
+        width: 500px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

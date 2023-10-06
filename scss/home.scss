@@ -1,0 +1,103 @@
+.home-hero {
+  background-image: url(../images/home-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-family: $UniH;
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  a {
+    padding: 18px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #c82929;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #a72222;
+    }
+  }
+}
+.repair-title {
+  background-color: #c82929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  h1 {
+    font-family: $UniH;
+    font-size: 42px;
+    margin-top: 16px;
+  }
+}
+.repairs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .repair-box {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 310px;
+    background-color: #141414;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin: 40px 20px;
+    img {
+      width: 275px;
+      height: 275px;
+      object-fit: cover;
+      border-radius: 7px;
+      border: 2px solid #fff;
+      margin-left: 20px;
+    }
+    .repair-desc {
+      margin-left: 32px;
+      height: 250px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        font-family: $UniH;
+        font-size: 22px;
+      }
+      a {
+        position: absolute;
+        padding: 12px 32px;
+        border-radius: 5px;
+        font-size: 18px;
+        background-color: #c82929;
+        color: #fff;
+        margin-top: 205px;
+        text-decoration: none;
+        &:hover {
+          background-color: #a72222;
+        }
+      }
+      p {
+        text-align: center;
+        margin-top: 10px;
+      }
+      span {
+        position: absolute;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-top: 175px;
+        font-family: $UniReg;
+      }
+    }
+  }
+}
