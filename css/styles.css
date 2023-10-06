@@ -8,7 +8,7 @@ html,
 body {
   height: 100%;
   font-family: "MontSemiB", sans-serif;
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 h1,
@@ -19,7 +19,7 @@ h5,
 h6,
 p {
   margin-bottom: 16px;
-  color: #efeee9;
+  color: #f2f2f2;
 }
 
 #inject {
@@ -31,15 +31,15 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #141414;
+  background-color: #f2f2f2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f2f2f2;
+  background: #949494;
   border-radius: 10px;
 }
 
@@ -275,13 +275,16 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #141414;
+  background-color: #f2f2f2;
   height: 80px;
+  box-shadow: 5px 5px 30px rgba(20, 20, 20, 0.6);
+  position: fixed;
+  width: 100%;
 }
 nav a {
   margin: 0 20px;
   text-decoration: none;
-  color: #fff;
+  color: #141414;
   font-family: "UniBlack", sans-serif;
   font-size: 30px;
   transition: ease 0.3s;
@@ -304,7 +307,7 @@ nav .left-nav a {
   margin: 0 10px;
   padding: 6px 4px;
   text-decoration: none;
-  color: #fff;
+  color: #141414;
   font-family: "MontSemiB", sans-serif;
   font-size: 18px;
   transition: ease 0.1s;
@@ -315,21 +318,21 @@ nav .left-nav a:hover {
 nav .left-nav #login {
   margin: 0 20px;
   text-decoration: none;
-  color: #141414;
+  color: #f2f2f2;
   font-family: "MontSemiB", sans-serif;
   font-size: 18px;
   transition: ease 0.1s;
   border: 2px solid rgba(0, 0, 0, 0);
   padding: 5px 12px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #141414;
   transition: ease 0.2s;
 }
 nav .left-nav #login:hover {
   transition: ease 0.2s;
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: #141414;
+  border: 2px solid #141414;
+  color: #141414;
+  background-color: #f2f2f2;
 }
 
 .footer {
@@ -339,7 +342,7 @@ nav .left-nav #login:hover {
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
-  background-color: #141414;
+  background-color: #f2f2f2;
 }
 .footer span {
   font-family: Arial, Helvetica, sans-serif;
@@ -348,7 +351,7 @@ nav .left-nav #login:hover {
   font-family: "MontSemiB", sans-serif;
 }
 .footer p {
-  color: #fff;
+  color: #141414;
   margin: 0 20px;
 }
 .footer .footer-links {
@@ -356,26 +359,23 @@ nav .left-nav #login:hover {
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .footer a {
   height: 36px;
   width: 36px;
-  color: #fff;
+  color: #141414;
   text-decoration: none;
   font-size: 1.45rem;
-  margin: 0px 20px;
+  margin: 0px 10px;
   transition: ease 0.35s;
   text-align: center;
-  border-radius: 30px;
 }
 .footer a i {
   margin-top: 19%;
 }
 .footer a:hover {
-  background-color: #fff;
-  color: #141414;
-  transition: ease 0.4s;
+  color: #090909;
 }
 
 .home-hero {
@@ -433,10 +433,11 @@ nav .left-nav #login:hover {
   align-items: center;
   width: 700px;
   height: 310px;
-  background-color: #141414;
+  background-color: #ebebeb;
   border-radius: 7px;
   margin-top: 30px;
   margin: 40px 20px;
+  color: #141414;
 }
 .repairs .repair-box img {
   width: 275px;
@@ -457,6 +458,7 @@ nav .left-nav #login:hover {
 .repairs .repair-box .repair-desc h3 {
   font-family: "MontBold", sans-serif;
   font-size: 22px;
+  color: #141414;
 }
 .repairs .repair-box .repair-desc a {
   position: absolute;
@@ -474,6 +476,7 @@ nav .left-nav #login:hover {
 .repairs .repair-box .repair-desc p {
   text-align: center;
   margin-top: 10px;
+  color: #141414;
 }
 .repairs .repair-box .repair-desc span {
   position: absolute;
@@ -482,6 +485,11 @@ nav .left-nav #login:hover {
   letter-spacing: 1px;
   margin-top: 175px;
   font-family: "MontMed", sans-serif;
+  color: #141414;
+}
+
+.contact-wrapper {
+  padding-top: 105px;
 }
 
 form {
@@ -494,43 +502,43 @@ form input {
   width: 500px;
   height: 65px;
   border-radius: 5px;
-  border: 2px solid #202020;
+  border: 2px solid #ebebeb;
   font-family: "MontSemiB", sans-serif;
   font-size: 18px;
   padding: 13px;
   margin-top: 10px;
-  background-color: #262626;
-  color: #fff;
+  background-color: #ebebeb;
+  color: #141414;
 }
 form select {
   width: 500px;
   height: 65px;
   border-radius: 5px;
-  border: 2px solid #202020;
+  border: 2px solid #ebebeb;
   font-family: "MontSemiB", sans-serif;
   font-size: 18px;
   padding: 13px;
   margin-top: 10px;
-  background-color: #262626;
-  color: #fff;
+  background-color: #ebebeb;
+  color: #141414;
 }
 form textarea {
   width: 500px;
   height: 260px;
   border-radius: 5px;
-  border: 2px solid #202020;
+  border: 2px solid #ebebeb;
   font-family: "MontSemiB", sans-serif;
   font-size: 18px;
   padding: 13px;
   margin-top: 10px;
-  background-color: #262626;
-  color: #fff;
+  background-color: #ebebeb;
+  color: #141414;
 }
 form .submit-contact {
   width: 500px;
   height: 65px;
   border-radius: 5px;
-  border: 2px solid #202020;
+  border: 2px solid #ebebeb;
   font-family: "MontSemiB", sans-serif;
   font-size: 18px;
   padding: 13px;

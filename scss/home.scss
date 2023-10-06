@@ -50,10 +50,11 @@
     align-items: center;
     width: 700px;
     height: 310px;
-    background-color: #141414;
+    background-color: #ebebeb;
     border-radius: 7px;
     margin-top: 30px;
     margin: 40px 20px;
+    color: #141414;
     img {
       width: 275px;
       height: 275px;
@@ -72,6 +73,7 @@
       h3 {
         font-family: $UniH;
         font-size: 22px;
+        color: #141414;
       }
       a {
         position: absolute;
@@ -89,6 +91,7 @@
       p {
         text-align: center;
         margin-top: 10px;
+        color: #141414;
       }
       span {
         position: absolute;
@@ -97,6 +100,7 @@
         letter-spacing: 1px;
         margin-top: 175px;
         font-family: $UniReg;
+        color: #141414;
       }
     }
   }

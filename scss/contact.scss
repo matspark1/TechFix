@@ -1,3 +1,6 @@
+.contact-wrapper{
+  padding-top: 105px;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -7,43 +10,43 @@ form {
     width: 500px;
     height: 65px;
     border-radius: 5px;
-    border: 2px solid #202020;
+    border: 2px solid #ebebeb;
     font-family: $UniBold;
     font-size: 18px;
     padding: 13px;
     margin-top: 10px;
-    background-color: #262626;
-    color: #fff;
+    background-color: #ebebeb;
+    color: #141414;
   }
   select {
     width: 500px;
     height: 65px;
     border-radius: 5px;
-    border: 2px solid #202020;
+    border: 2px solid #ebebeb;
     font-family: $UniBold;
     font-size: 18px;
     padding: 13px;
     margin-top: 10px;
-    background-color: #262626;
-    color: #fff;
+    background-color: #ebebeb;
+    color: #141414;
   }
   textarea {
     width: 500px;
     height: 260px;
     border-radius: 5px;
-    border: 2px solid #202020;
+    border: 2px solid #ebebeb;
     font-family: $UniBold;
     font-size: 18px;
     padding: 13px;
     margin-top: 10px;
-    background-color: #262626;
-    color: #fff;
+    background-color: #ebebeb;
+    color: #141414;
   }
   .submit-contact {
     width: 500px;
     height: 65px;
     border-radius: 5px;
-    border: 2px solid #202020;
+    border: 2px solid #ebebeb;
     font-family: $UniBold;
     font-size: 18px;
     padding: 13px;
